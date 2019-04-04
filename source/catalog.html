@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка. Каталог.</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__wrapper">
+
+      <a class="header__logo" href="index.html">Логотип интернет-магазина "Mishka"</a>
+
+      <span class="header__call-main-nav"></span>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link">Каталог товаров</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="search.html">Поиск по сайту</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link call-cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="catalog">
+      <div class="catalog__wrapper">
+
+        <h1 class="catalog__header">Каталог товаров</h1>
+
+        <ul class="catalog__list">
+
+          <li class="catalog__item">
+            <article class="product">
+              <img class="product__image" src="img/product.png" alt="Изображение 'Зайчика-попрыгайчика'">
+              <h1 class="product__name">Зайчик-попрыгайчик</h1>
+              <p class="product__description">Рост 30 см, вес 200 г</p>
+              <div class="product__purchase">
+                <span class="product__price">1 200 руб.</span>
+                <button class="product__button-buy" type="button"></button>
+              </div>
+            </article>
+          </li>
+
+          <li class="catalog__item">
+            <article class="product">
+              <img class="product__image" src="img/product.png" alt="Изображение 'Корзинки для белья'">
+              <h1 class="product__name">Корзинка для белья</h1>
+              <p class="product__description">Диаметр 15 см, высота 10 см</p>
+              <div class="product__purchase">
+                <span class="product__price">690 руб.</span>
+                <button class="product__button-buy" type="button"></button>
+              </div>
+            </article>
+          </li>
+
+          <li class="catalog__item">
+            <article class="product">
+              <img class="product__image" src="img/product.png" alt="Изображение 'Большой корзины для игрушек'">
+              <h1 class="product__name">Большая корзина для игрушек</h1>
+              <p class="product__description">Диаметр 30 см, высота 30 см</p>
+              <div class="product__purchase">
+                <span class="product__price">1 500 руб.</span>
+                <button class="product__button-buy" type="button"></button>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+
+        <article class="process-creation">
+          <h1 class="process-creation__header">Процесс производства</h1>
+          <video class="process-creation__video" src="videofile.ogg" autoplay poster="posterimage.jpg"></video>
+          <p class="process-creation__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="button process-creation__button-order" href="#">Сделать заказ</a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--insta" href="#">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--tw" href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="developer">
+        <b class="developer__text">Разработано:</b>
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
