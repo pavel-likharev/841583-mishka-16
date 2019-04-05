@@ -46,11 +46,11 @@
           <li class="catalog__item">
             <article class="product">
               <img class="product__image" src="img/product.png" alt="Изображение 'Зайчика-попрыгайчика'">
-              <h1 class="product__name">Зайчик-попрыгайчик</h1>
+              <h1 class="product__name"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h1>
               <p class="product__description">Рост 30 см, вес 200 г</p>
               <div class="product__purchase">
                 <span class="product__price">1 200 руб.</span>
-                <button class="product__button-buy" type="button"></button>
+                <a class="product__button-buy" href="#"></a>
               </div>
             </article>
           </li>
@@ -58,11 +58,11 @@
           <li class="catalog__item">
             <article class="product">
               <img class="product__image" src="img/product.png" alt="Изображение 'Корзинки для белья'">
-              <h1 class="product__name">Корзинка для белья</h1>
+              <h1 class="product__name"><a class="product__link" href="#">Корзинка для белья</a></h1>
               <p class="product__description">Диаметр 15 см, высота 10 см</p>
               <div class="product__purchase">
                 <span class="product__price">690 руб.</span>
-                <button class="product__button-buy" type="button"></button>
+                <a class="product__button-buy" href="#"></a>
               </div>
             </article>
           </li>
@@ -70,11 +70,11 @@
           <li class="catalog__item">
             <article class="product">
               <img class="product__image" src="img/product.png" alt="Изображение 'Большой корзины для игрушек'">
-              <h1 class="product__name">Большая корзина для игрушек</h1>
+              <h1 class="product__name"><a class="product__link" href="#">Большая корзина для игрушек</a></h1>
               <p class="product__description">Диаметр 30 см, высота 30 см</p>
               <div class="product__purchase">
                 <span class="product__price">1 500 руб.</span>
-                <button class="product__button-buy" type="button"></button>
+                <a class="product__button-buy" href="#"></a>
               </div>
             </article>
           </li>
@@ -83,13 +83,40 @@
 
         <article class="process-creation">
           <h1 class="process-creation__header">Процесс производства</h1>
-          <video class="process-creation__video" src="videofile.ogg" autoplay poster="posterimage.jpg"></video>
+          <div class="process-creation__video">
+            <img class="process-creation__image" src="img/process-creatin.png" alt="Изображение процесса производства">
+          </div>
           <p class="process-creation__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="button process-creation__button-order" href="#">Сделать заказ</a>
         </article>
 
       </div>
     </section>
+
+    <section class="modal">
+      <div class="modal__wrapper">
+
+        <h2 class="modal__header">Добавить в корзину</h2>
+
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <span class="modal__text-form">Выберите размер:</span>
+          <div class="modal__choice">
+            <label class="modal__item-name">
+              <input class="modal__item-form" type="radio" name="size" value="S" checked> S
+            </label>
+            <label class="modal__item-name">
+              <input class="modal__item-form" type="radio" name="size" value="M"> M
+            </label>
+            <label class="modal__item-name">
+              <input class="modal__item-form" type="radio" name="size" value="L"> L
+            </label>
+          </div>
+          <input class="button modal__button" type="submit" name="add-product" value="Добавить">
+        </form>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">

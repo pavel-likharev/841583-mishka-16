@@ -36,66 +36,109 @@
   </header>
 
   <main class="main">
-    <section class="knitting">
-      <div class="knitting__wrapper">
+    <section class="form">
+      <div class="form__wrapper">
 
-        <h1 class="knitting__header">Вязание на заказ</h1>
+        <h1 class="form__header">Вязание на заказ</h1>
 
-        <form class="form-knitting" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form__knitting" action="https://echo.htmlacademy.ru" method="post">
 
           <h2 class="visually-hidden">Форма заказа</h2>
 
-          <p class="form-knitting__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <div class="form-knitting__section-sorting">
-            <h3 class="form-knitting__section-name">Тип</h3>
-            <input class="form-knitting__option form-knitting__option--radio" type="radio" name="type-product" value="Аксессуар для интерьера" checked>
-            <input class="form-knitting__option form-knitting__option--radio" type="radio" name="type-product" value="Детская игрушка">
-          </div>
-          <div class="form-knitting__section-sorting">
-            <h3 class="form-knitting__section-name">Цвет</h3>
-            <input class="form-knitting__option form-knitting__option--checkbox" type="checkbox" name="white" value="Белый" checked>
-            <input class="form-knitting__option form-knitting__option--checkbox" type="checkbox" name="grey" value="Серый" checked>
-            <input class="form-knitting__option form-knitting__option--checkbox" type="checkbox" name="tiffany" value="«Тиффани»">
-            <input class="form-knitting__option form-knitting__option--checkbox" type="checkbox" name="black" value="Черный">
-            <input class="form-knitting__option form-knitting__option--checkbox" type="checkbox" name="pink" value="Розовый">
-            <input class="form-knitting__option form-knitting__option--checkbox" type="checkbox" name="orange" value="Оранжевый">
-          </div>
-          <div class="form-knitting__section-sorting">
-            <h3 class="form-knitting__section-name">ФИО</h3>
-
-            <label class="form-knitting__field-header" for="name-customer">Имя:</label>
-            <input class="form-knitting__field" type="text" name="name-customer" placeholder="Введите ваше имя*" id="name-customer" required>
-
-            <label class="form-knitting__field-header" for="second-name-customer"></label>
-            <input class="form-knitting__field" type="text" name="second-name-customer" placeholder="Укажите фамилию*" id="second-name-customer" required>
-
-            <label class="form-knitting__field-header" for="patronymic-customer"></label>
-            <input class="form-knitting__field" type="text" name="patronymic" placeholder="Отчество, если желаете:" id="patronymic">
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Тип</h3>
+            <label class="form__option-name">
+              <input class="form__option form__option--radio" type="radio" name="type-product" value="Аксессуар для интерьера" checked> Аксессуар для интерьера
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--radio" type="radio" name="type-product" value="Детская игрушка"> Детская игрушка
+            </label>
           </div>
 
-          <div class="form-knitting__section-sorting">
-            <h3 class="form-knitting__section-name">Тел</h3>
-            <input class="form-knitting__field form-knitting__field--phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX*" required>
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Цвет</h3>
+
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="white" value="Белый" checked> Белый
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="grey" value="Серый" checked> Серый
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="tiffany" value="«Тиффани»"> «Тиффани»
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="black" value="Черный"> Черный
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="pink" value="Розовый"> Розовый
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="orange" value="Оранжевый"> Оранжевый
+            </label>
+          </div>
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">ФИО</h3>
+
+            <label class="form__field-header" for="name-customer">Имя:</label>
+            <input class="form__field" type="text" name="name-customer" placeholder="Введите ваше имя*" id="name-customer" required>
+
+            <label class="form__field-header" for="second-name-customer">Фамилия:</label>
+            <input class="form__field" type="text" name="second-name-customer" placeholder="Укажите фамилию*" id="second-name-customer" required>
+
+            <label class="form__field-header" for="patronymic-customer">Отчество:</label>
+            <input class="form__field" type="text" name="patronymic" placeholder="Отчество, если желаете:" id="patronymic-customer">
           </div>
 
-          <div class="form-knitting__section-sorting">
-            <h3 class="form-knitting__section-name">E-mail</h3>
-            <input class="form-knitting__field form-knitting__field--email" type="text" name="email" placeholder="Ваш E-mail*" required>
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Тел</h3>
+            <input class="form__field form__field--phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX*" required>
           </div>
 
-          <div class="form-knitting__section-sorting">
-            <h3 class="form-knitting__section-name">Доп</h3>
-            <input class="form-knitting__field form-knitting__field--wishes" type="text" name="wishes" placeholder="Опишите все ваши пожелания к заказу">
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">E-mail</h3>
+            <input class="form__field form__field--email" type="text" name="email" placeholder="Ваш E-mail*" required>
           </div>
 
-          <span class="form-knitting__text-required">*Поля обязательны для заполнения</span>
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Доп</h3>
+            <input class="form__field form__field--wishes" type="text" name="wishes" placeholder="Опишите все ваши пожелания к заказу">
+          </div>
 
-          <input class="button form-knitting__button" type="submit" name="send-order" value="Отправить заказ">
+          <span class="form__text-required">*Поля обязательны для заполнения</span>
+
+          <input class="button form__button" type="submit" name="send-order" value="Отправить заказ">
         </form>
 
       </div>
     </section>
+
+    <section class="modal">
+      <div class="modal__wrapper">
+
+        <h2 class="modal__header">Добавить в корзину</h2>
+
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <span class="modal__text-form">Выберите размер:</span>
+          <div class="modal__choice">
+            <label class="modal__item-name">
+              <input class="modal__item-form" type="radio" name="size" value="S" checked> S
+            </label>
+            <label class="modal__item-name">
+              <input class="modal__item-form" type="radio" name="size" value="M"> M
+            </label>
+            <label class="modal__item-name">
+              <input class="modal__item-form" type="radio" name="size" value="L"> L
+            </label>
+          </div>
+          <input class="button modal__button" type="submit" name="add-product" value="Добавить">
+        </form>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
