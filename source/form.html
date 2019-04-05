@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка. Форма заказа.</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__wrapper">
+
+      <a class="header__logo" href="index.html">Логотип интернет-магазина "Mishka"</a>
+
+      <span class="header__call-main-nav"></span>
+
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link">Вязание на заказ</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="search.html">Поиск по сайту</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link call-cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="form">
+      <div class="form__wrapper">
+
+        <h1 class="form__header">Вязание на заказ</h1>
+
+        <form class="form__knitting" action="https://echo.htmlacademy.ru" method="post">
+
+          <h2 class="visually-hidden">Форма заказа</h2>
+
+          <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Тип</h3>
+            <label class="form__option-name">
+              <input class="form__option form__option--radio" type="radio" name="type-product" value="Аксессуар для интерьера" checked> Аксессуар для интерьера
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--radio" type="radio" name="type-product" value="Детская игрушка"> Детская игрушка
+            </label>
+          </div>
+
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Цвет</h3>
+
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="white" value="Белый" checked> Белый
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="grey" value="Серый" checked> Серый
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="tiffany" value="«Тиффани»"> «Тиффани»
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="black" value="Черный"> Черный
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="pink" value="Розовый"> Розовый
+            </label>
+            <label class="form__option-name">
+              <input class="form__option form__option--checkbox" type="checkbox" name="orange" value="Оранжевый"> Оранжевый
+            </label>
+          </div>
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">ФИО</h3>
+
+            <label class="form__field-header" for="name-customer">Имя:</label>
+            <input class="form__field" type="text" name="name-customer" placeholder="Введите ваше имя*" id="name-customer" required>
+
+            <label class="form__field-header" for="second-name-customer">Фамилия:</label>
+            <input class="form__field" type="text" name="second-name-customer" placeholder="Укажите фамилию*" id="second-name-customer" required>
+
+            <label class="form__field-header" for="patronymic-customer">Отчество:</label>
+            <input class="form__field" type="text" name="patronymic" placeholder="Отчество, если желаете:" id="patronymic-customer">
+          </div>
+
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Тел</h3>
+            <input class="form__field form__field--phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX*" required>
+          </div>
+
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">E-mail</h3>
+            <input class="form__field form__field--email" type="text" name="email" placeholder="Ваш E-mail*" required>
+          </div>
+
+          <div class="form__section-sorting">
+            <h3 class="form__section-name">Доп</h3>
+            <input class="form__field form__field--wishes" type="text" name="wishes" placeholder="Опишите все ваши пожелания к заказу">
+          </div>
+
+          <span class="form__text-required">*Поля обязательны для заполнения</span>
+
+          <input class="button form__button" type="submit" name="send-order" value="Отправить заказ">
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--insta" href="#">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--tw" href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="developer">
+        <b class="developer__text">Разработано:</b>
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <section class="modal">
+    <div class="modal__wrapper">
+
+      <h2 class="modal__header">Добавить в корзину</h2>
+
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <span class="modal__text-form">Выберите размер:</span>
+        <div class="modal__choice">
+          <label class="modal__item-name">
+            <input class="modal__item-form" type="radio" name="size" value="S" checked> S
+          </label>
+          <label class="modal__item-name">
+            <input class="modal__item-form" type="radio" name="size" value="M"> M
+          </label>
+          <label class="modal__item-name">
+            <input class="modal__item-form" type="radio" name="size" value="L"> L
+          </label>
+        </div>
+        <input class="button modal__button" type="submit" name="add-product" value="Добавить">
+      </form>
+
+    </div>
+  </section>
+
+</body>
+
+</html>
