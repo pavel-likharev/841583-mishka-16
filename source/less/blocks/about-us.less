@@ -21,7 +21,36 @@
 }
 
 .about-us__item {
+  position: relative;
+
   padding-top: 55px;
-  padding-bottom: 30px;
+
   .font(17px; 20px; bold);
+}
+
+.about-us__item {
+  &--eco::before {
+    .icon-features(url(../../img/icon-feature-flower.svg));
+  }
+
+  &--quality::before {
+    .icon-features(url(../../img/icon-feature-money.svg));
+  }
+
+  &--likes::before {
+    .icon-features(url(../../img/icon-feature-heart.svg));
+  }
+
+  &--love::before {
+    .icon-features(url(../../img/icon-feature-ball.svg));
+  }
+
+  &--domestic::before {
+    .icon-features(url(../../img/icon-feature-rocket.svg));
+
+  }
+
+  &--gift::before {
+    .icon-features(url(../../img/icon-feature-gift.svg));
+  }
 }

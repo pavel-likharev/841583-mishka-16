@@ -4,11 +4,24 @@
 }
 
 .nav-border() {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @grey;
 }
 
 .font(@font-size; @line-height; @font-weight) {
   font-size: @font-size;
   line-height: @line-height;
   font-weight: @font-weight;
+}
+
+.icon-features(@url) {
+  content: "";
+  width: 55px;
+  height: 45px;
+  position: absolute;
+  top: 25px;
+  left: -5px;
+
+  background-image: @url;
+  background-repeat: no-repeat;
+  background-position: center;
 }
