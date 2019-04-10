@@ -1,0 +1,62 @@
+.sorting-nav__wrapper {
+  .size-mobile();
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-position: top center;
+  background-color: @white;
+}
+
+.sorting-nav__header {
+  padding-top: 86px;
+  padding-bottom: 86px;
+  padding-left: 38px;
+  padding-right: 38px;
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.sorting-nav__list {
+  .list-reset();
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sorting-nav__item {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.sorting-nav__item--interior {
+  padding-right: 36px;
+
+  background-color: @green-lighter;
+}
+
+.sorting-nav__item--toys {
+  background-color: @green-darken;
+}
+
+.sorting-nav__link {
+  .font(19px; 24px; bold);
+  .link-reset();
+
+  align-self: center;
+
+  width: 133px;
+
+  color: @white;
+}

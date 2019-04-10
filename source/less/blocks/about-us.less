@@ -1,0 +1,53 @@
+.about-us__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.about-us__header {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .font(25px; 30px; bold);
+}
+
+.about-us__list {
+  display: flex;
+  flex-direction: column;
+
+  .list-reset();
+  white-space: pre-line;
+}
+
+.about-us__item {
+  position: relative;
+
+  padding-top: 55px;
+
+  .font(17px; 20px; bold);
+
+  &--eco::before {
+    .icon-features(url("../../img/icon-feature-flower.svg"));
+  }
+
+  &--quality::before {
+    .icon-features(url("../../img/icon-feature-money.svg"));
+  }
+
+  &--likes::before {
+    .icon-features(url("../../img/icon-feature-heart.svg"));
+  }
+
+  &--love::before {
+    .icon-features(url("../../img/icon-feature-ball.svg"));
+  }
+
+  &--domestic::before {
+    .icon-features(url("../../img/icon-feature-rocket.svg"));
+  }
+
+  &--gift::before {
+    .icon-features(url("../../img/icon-feature-gift.svg"));
+  }
+}
