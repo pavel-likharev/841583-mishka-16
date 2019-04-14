@@ -16,7 +16,6 @@
 .contacts__container {
   display: flex;
 
-  width: 260px;
   margin-bottom: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -24,9 +23,9 @@
 
 .contacts__email,
 .contacts__adress {
-  width: 77px;
   margin: 0;
   padding: 0;
+  padding-right: 30px;
 
   .font(15px; 30px; regular);
 }
@@ -40,6 +39,18 @@
 
 .contacts__link--email {
   border-bottom: 1px solid #62d1ba;
+
+  &:hover,
+  &:focus {
+    color: @emerald;
+    border-color: @emerald;
+  }
+
+  &:active {
+    color: @emerald;
+    border-color: @emerald;
+    opacity: 0.3;
+  }
 }
 
 .contacts__link--location {

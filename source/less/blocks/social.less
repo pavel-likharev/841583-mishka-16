@@ -5,6 +5,7 @@
 .social__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   .list-reset();
 }
 
@@ -19,4 +20,18 @@
 .social__link {
   margin: 0;
   padding: 0;
+
+  &:hover,
+  &:focus {
+    .social__icon-color {
+      fill: @emerald;
+    }
+  }
+
+  &:active {
+    .social__icon-color {
+      fill: @emerald;
+      opacity: 0.3;
+    }
+  }
 }

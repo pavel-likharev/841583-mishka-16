@@ -30,33 +30,38 @@
   flex-direction: column;
 }
 
-.sorting-nav__item {
+.sorting-nav__link {
+  .font(19px; 24px; bold);
+  .link-reset();
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 27px;
   padding-right: 27px;
+
+  color: @white;
 }
 
-.sorting-nav__item--interior {
-  padding-right: 36px;
-
+.sorting-nav__link--interior {
   background-color: @green-lighter;
 }
 
-.sorting-nav__item--toys {
+.sorting-nav__link--toys {
   background-color: @green-darken;
 }
 
-.sorting-nav__link {
-  .font(19px; 24px; bold);
-  .link-reset();
+.sorting-nav__text {
+  width: 130px;
+}
 
-  align-self: center;
+.sorting-nav__icon {
+  fill: #3bb09d;
+}
 
-  width: 133px;
-
-  color: @white;
+.sorting-nav__icon--interior {
+  margin-right: 10px;
 }

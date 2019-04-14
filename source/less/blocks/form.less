@@ -1,0 +1,220 @@
+.form__wrapper {
+  .size-mobile();
+  display: flex;
+  flex-direction: column;
+}
+
+.form__header {
+  margin: 0;
+  padding-top: 73px;
+  padding-bottom: 73px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .font(27px; 30px; bold);
+  text-align: center;
+
+  background-color: #f1f1f1;
+}
+
+.form__knitting {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.form__description {
+  margin: 0;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  padding: 0;
+
+  .font(13px; 24px; regular);
+}
+
+.form__section-sorting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.form__section-sorting--wishes {
+  margin-bottom: 0;
+}
+
+.form__section-name {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+
+  .font(17px; 16px; bold);
+  color: @green-lighter;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 198px;
+    height: 1px;
+
+    background-color: @green-lighter;
+  }
+}
+
+.form__option-name {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 22px;
+  padding-left: 62px;
+  padding-right: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  .font(17px; 18px; bold);
+
+  cursor: pointer;
+}
+
+.form__option--checkbox + .form__option-name {
+  &::before {
+    content: "";
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2px solid @black;
+  }
+}
+
+.form__option--checkbox:checked + .form__option-name {
+  &::before {
+    .icon-element(url("../../img/icon-tick.svg"); no-repeat; 22px 16px; center);
+  }
+}
+
+.form__option--radio + .form__option-name {
+  &::before {
+    content: "";
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2px solid @black;
+    border-radius: 50%;
+  }
+}
+
+.form__option--radio:checked + .form__option-name {
+  &::after {
+    content: "";
+
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background-color: @green-lighter;
+    border-radius: 50%;
+  }
+}
+
+
+.form__option--checkbox:hover + .form__option-name,
+.form__option--checkbox:focus + .form__option-name,
+.form__option--radio:hover + .form__option-name,
+.form__option--radio:focus + .form__option-name {
+  &::before {
+    border-color: @green-lighter;
+  }
+}
+
+.form__option--checkbox:active + .form__option-name,
+.form__option--radio:active + .form__option-name {
+  &::before {
+    border-color: #c7c7c7;
+  }
+}
+
+.form__field-header {
+  margin: 0;
+  padding: 0;
+
+  .font(17px; 18px; bold);
+
+  cursor: pointer;
+}
+
+.form__field {
+  display: block;
+  width: 260px;
+  height: 50px;
+  margin-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  .font(17px; 18px; regular);
+
+  border: none;
+  border-bottom: 2px solid @black;
+
+  &:hover,
+  &:focus {
+    border-color: @green-lighter;
+  }
+
+  &:hover + .form__icon,
+  &:focus + .form__icon {
+    fill: @green-lighter;
+  }
+}
+
+.form__field--phone,
+.form__field--email {
+  padding-right: 45px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 52px;
+  right: 4px;
+}
+
+.form__field--wishes {
+  height: 140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0;
+
+  border: 2px solid @black;
+  resize: none;
+}
+
+.form__text-required {
+  display: inline-block;
+  margin: 0;
+  margin-top: 17px;
+  margin-bottom: 33px;
+  padding: 0;
+  .font(14px; 16px; regular);
+}
+
+.form__button {
+  margin-bottom: 55px;
+}

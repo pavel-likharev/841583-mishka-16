@@ -1,3 +1,78 @@
 .modal {
   display: none;
+  position: absolute;
+  top: 1045px;
+  left: 50%;
+  margin: -160px;
+}
+
+.modal__wrapper {
+  .size-mobile();
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  background-color: @white;
+}
+
+.modal__header {
+
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  .font(25px; 30px; bold);
+  text-align: center;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__text-form {
+  display: inline-block;
+  margin-bottom: 25px;
+  .font(15px; 30px; regular);
+  text-align: center;
+}
+
+.modal__choice {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal__item-name {
+  width: 82px;
+  height: 52px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  .font(17px; 16px; bold);
+  text-align: center;
+
+  border: 2px solid @grey;
+}
+
+.modal__item-form:checked + .modal__item-name {
+  border-color: @green-lighter;
+}
+
+.modal__item-form:hover + .modal__item-name,
+.modal__item-form:focus + .modal__item-name {
+  border-color: #c7c7c7;
+}
+
+.modal__item-form:active + .modal__item-name {
+  border-color: @green-lighter;
+}
+
+.modal__button {
+  margin-bottom: 45px;
 }

@@ -1,5 +1,29 @@
-* {
-  outline: 1px dashed lightgrey;
+// * {
+//   outline: 1px dashed lightgrey;
+// }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -31,17 +55,4 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.button {
-  width: 260px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-
-  .font(17px; 20px; bold);
-  text-transform: uppercase;
-  text-align: center;
-
-  border: 2px solid @black;
-  .link-reset;
 }

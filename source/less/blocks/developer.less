@@ -16,4 +16,18 @@
 
 .developer__link {
   margin-right: 40px;
+
+  &:hover,
+  &:focus {
+    .developer__icon-color {
+      fill: @emerald;
+    }
+  }
+
+  &:active {
+    .developer__icon-color {
+      fill: @emerald;
+      opacity: 0.3;
+    }
+  }
 }
