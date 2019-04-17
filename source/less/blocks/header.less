@@ -13,7 +13,7 @@
   border-bottom: 1px solid @grey;
 }
 
-.header__logo {
+.header__logo-mobile {
   margin-top: 22px;
   margin-bottom: 22px;
 }
@@ -47,4 +47,26 @@ a[href].header__logo {
 
 .header__button-main-nav--open {
   .icon-element(url("../../img/icon-menu-open.svg"); no-repeat; 21px 20px; center;);
+}
+
+
+@media (min-width: @tablet-width) {
+  .header__wrapper {
+    .size-tablet();
+    flex-direction: row;
+  }
+
+  .header__logo-mobile {
+    display: none;
+  }
+
+  .header__button-main-nav {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__wrapper {
+    .size-desktop();
+  }
 }

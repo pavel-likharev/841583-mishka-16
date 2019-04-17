@@ -12,8 +12,6 @@
 .social__item {
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 30px;
-  margin-bottom: 25px;
   padding: 0;
 }
 
@@ -33,5 +31,14 @@
       fill: @emerald;
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 222px;
+    flex-grow: 1;
+    padding-top: 12px;
+    padding-right: 5px;
   }
 }

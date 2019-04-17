@@ -5,6 +5,7 @@
   flex-direction: column;
 
   background-image: url("../../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
   background-position: top center;
   background-color: @white;
 }
@@ -64,4 +65,57 @@
 
 .sorting-nav__icon--interior {
   margin-right: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .sorting-nav__wrapper {
+    .size-tablet();
+
+    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: @white;
+  }
+
+  .sorting-nav__header {
+    padding-top: 160px;
+    padding-bottom: 370px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+
+    .font(43px; 50px; bold);
+    white-space: normal;
+  }
+
+  .sorting-nav__list {
+    position: relative;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: @tablet-width;
+      height: 24px;
+      .icon-element(url("../../img/bg-zigzag-fill.svg"); no-repeat; 768px 24px; center);
+    }
+  }
+
+  .sorting-nav__item {
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sorting-nav__wrapper {
+    .size-desktop();
+  }
 }
