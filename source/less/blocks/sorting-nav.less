@@ -96,10 +96,12 @@
   }
 
   .sorting-nav__list {
+    width: @tablet-width;
     position: relative;
     flex-direction: row;
     padding-left: 50px;
     padding-right: 50px;
+    margin: 0;
 
     &::after {
       content: "";
@@ -138,6 +140,8 @@
   }
 
   .sorting-nav__list {
+    width: @desktop-width;
+
     &::after {
       width: @desktop-width;
       height: 34px;
