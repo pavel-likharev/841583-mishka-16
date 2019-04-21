@@ -1,0 +1,149 @@
+.process-creation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid @grey;
+}
+
+.process-creation__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-creation__header {
+  position: relative;
+  margin-left: 28px;
+  margin-right: 28px;
+  padding-left: 64px;
+  padding-bottom: 150px;
+
+  .font(17px; 24px; bold);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 0;
+
+    width: 32px;
+    height: 22px;
+
+    .icon-element(url("../../img/icon-video.svg"); no-repeat; 32px 22px; center);
+  }
+}
+
+.process-creation__video {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+}
+
+.process-creation__icon-play {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  z-index: 5;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    transition-duration: 0.5s;
+  }
+}
+
+.process-creation__text {
+  margin-top: 28px;
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-bottom: 28px;
+  padding-left: 8px;
+  padding-right: 40px;
+
+
+  .font(13px; 24px; regular);
+}
+
+.process-creation__button-order {
+  width: 192px;
+  align-self: center;
+  margin-bottom: 32px;
+
+  .font(17px; 16px; bold);
+}
+
+@media (min-width: @tablet-width) {
+  .process-creation {
+    width: @tablet-width;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .process-creation__video {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
+
+  .process-creation__image {
+    width: 668px;
+    height: 455px;
+  }
+
+  .process-creation__icon-play {
+    top: 200px;
+    left: 300px;
+  }
+
+  .process-creation__description {
+    width: 584px;
+    margin-left: 42px;
+    margin-right: 42px;
+  }
+
+  .process-creation__header {
+    padding-bottom: 0;
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      width: 32px;
+      height: 22px;
+
+      .icon-element(url("../../img/icon-video.svg"); no-repeat; 32px 32px; center);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .process-creation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: @desktop-width;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 105px;
+  }
+
+  .process-creation__description {
+    width: 350px;
+    margin: 0;
+    padding-left: 57px;
+    padding-right: 57px;
+  }
+
+  .process-creation__image {
+    width: 682px;
+    height: 455px;
+  }
+}

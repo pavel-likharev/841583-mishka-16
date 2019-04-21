@@ -3,8 +3,14 @@
   margin: 0 auto;
 }
 
-.nav-border() {
-  border-bottom: 1px solid @grey;
+.size-tablet() {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.size-desktop() {
+  width: 1150px;
+  margin: 0 auto;
 }
 
 .font(@font-size; @line-height; @font-weight) {
@@ -18,10 +24,17 @@
   width: 55px;
   height: 45px;
   position: absolute;
-  top: 25px;
+  top: 20px;
   left: -5px;
 
   background-image: @url;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.icon-element(@path; @repeat; @size; @position) {
+  background-image: @path;
+  background-repeat: @repeat;
+  background-size: @size;
+  background-position: @position;
 }
