@@ -1,9 +1,13 @@
+.footer {
+  width: 100%;
+}
+
 .footer__wrapper {
+  .size-mobile();
   display: flex;
   flex-direction: column;
-  .size-mobile();
-  padding-top: 30px;
-  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: #f1f1f1;
 }
 
@@ -42,7 +46,6 @@
 
 @media (min-width: @desktop-width) {
   .footer__wrapper {
-    .size-tablet();
-    flex-direction: row;
+    .size-desktop();
   }
 }

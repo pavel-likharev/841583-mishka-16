@@ -39,8 +39,24 @@
   flex-direction: column;
 
   margin: 0;
+}
+
+.form__section-kind,
+.form__section-color,
+.form__section-customer,
+.form__section-contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
   margin-bottom: 32px;
 }
+
+.form__list-customer {
+  .list-reset();
+}
+
 
 .form__section-sorting--wishes {
   margin-bottom: 0;
@@ -70,6 +86,7 @@
 .form__option-name {
   position: relative;
 
+  width: 240px;
   margin: 0;
   margin-bottom: 22px;
   padding-left: 62px;
@@ -192,7 +209,7 @@
 
 .form__icon {
   position: absolute;
-  top: 52px;
+  top: 15px;
   right: 4px;
 }
 
@@ -215,6 +232,214 @@
   .font(14px; 16px; regular);
 }
 
-.form__button {
+.form__add-container {
   margin-bottom: 55px;
+}
+
+.form__button {
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    .size-tablet();
+  }
+
+  .form__header {
+    position: relative;
+    width: @tablet-width;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 85px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .font(43px; 50px; bold);
+    text-align: center;
+
+    background-color: #f1f1f1;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: @tablet-width;
+      height: 24px;
+      .icon-element(url("../../img/bg-zigzag-fill.svg"); no-repeat; 768px 24px; center);
+    }
+  }
+
+  .form__knitting {
+    padding: 0;
+  }
+
+  .form__description {
+    padding-top: 70px;
+    padding-bottom: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    .font(17px; 30px; normal);
+  }
+
+  .form__section-sorting {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    &--color {
+      background-color: #f1f1f1;
+    }
+
+    &--contacts {
+      flex-wrap: wrap;
+      background-color: #f1f1f1;
+    }
+  }
+
+  .form__section-kind,
+  .form__section-color,
+  .form__section-customer,
+  .form__section-contacts {
+    width: 501px;
+  }
+
+  .form__section-color {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__option-name,
+  .form__field {
+    width: 501px;
+  }
+
+  .form__field {
+    &--phone,
+    &--email {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .form__section-color .form__option-name {
+    width: 240px;
+  }
+
+  .form__section-name {
+    width: 167px;
+    margin: 0;
+    margin-bottom: 26px;
+    padding: 0;
+    padding-top: 15px;
+
+    .font(17px; 16px; bold);
+    color: @green-lighter;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__item-customer {
+    display: flex;
+    width: 501px;
+    align-items: baseline;
+  }
+
+  .form__field-header {
+    margin-right: 25px;
+  }
+
+  .form__add-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    .size-desktop();
+  }
+
+  .form__header {
+    position: relative;
+    width: @desktop-width;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .font(53px; 57px; bold);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: @desktop-width;
+      height: 34px;
+      .icon-element(url("../../img/bg-zigzag-fill.svg"); no-repeat; 1150px 34px; center);
+    }
+  }
+
+  .form__description {
+    padding-top: 110px;
+  }
+
+  .form__section-name {
+    width: 175px;
+    text-align: center;
+  }
+
+  .form__section-kind,
+  .form__section-color,
+  .form__section-customer,
+  .form__section-contacts {
+    width: 875px;
+  }
+
+  .form__section-customer {
+    width: 700px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__item-customer {
+    width: 700px;
+  }
+
+
+  .form__field {
+    width: 630px;
+
+    &--phone,
+    &--email,
+    &--wishes {
+      width: 700px;
+    }
+  }
+
+  .form__icon {
+    position: absolute;
+    top: 15px;
+    right: 180px;
+  }
+
+  .form__add-container {
+    width: 700px;
+    align-self: center;
+    padding: 0;
+  }
 }
