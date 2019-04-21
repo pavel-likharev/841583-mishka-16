@@ -4,8 +4,12 @@
   flex-direction: column;
 }
 
+.catalog__header-container {
+  background-color: #f1f1f1;
+}
+
 .catalog__header {
-  margin: 0;
+  .size-mobile();
   margin-bottom: 30px;
   padding-top: 73px;
   padding-bottom: 73px;
@@ -14,8 +18,6 @@
 
   .font(27px; 30px; bold);
   text-align: center;
-
-  background-color: #f1f1f1;
 }
 
 .catalog__list {
@@ -36,8 +38,8 @@
   }
 
   .catalog__header {
+    .size-tablet();
     position: relative;
-    margin: 0;
     padding-top: 100px;
     padding-bottom: 80px;
     padding-left: 50px;
@@ -80,6 +82,7 @@
   }
 
   .catalog__header {
+    .size-desktop();
     .font(53px; 57px; bold);
 
     &::after {

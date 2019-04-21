@@ -44,7 +44,7 @@
           </li>
 
           <li class="navigation__item navigation__item--logo">
-            <a class="navigation__logo">
+            <a class="navigation__logo" href="index.html">
               <svg class="navigation__logo-tablet" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="112.389px" height="46.087px" viewBox="19.137 15.003 112.389 46.087" enable-background="new 19.137 15.003 112.389 46.087" xml:space="preserve">
                 <g id="Layer_2">
                   <g>
@@ -133,27 +133,28 @@
 
   <main class="main">
     <section class="form">
-      <div class="form__wrapper">
-
+      <div class="form__header-container">
         <h1 class="form__header">Вязание на заказ</h1>
+      </div>
 
-        <form class="form__knitting" action="https://echo.htmlacademy.ru" method="post">
+      <form class="form__knitting" action="https://echo.htmlacademy.ru" method="post">
 
-          <h2 class="visually-hidden">Форма заказа</h2>
+        <h2 class="visually-hidden">Форма заказа</h2>
 
-          <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <div class="form__section-sorting">
-            <h3 class="form__section-name">Тип</h3>
-            <div class="form__section-kind">
-              <input class="form__option form__option--radio visually-hidden" type="radio" name="type-product" value="Аксессуар для интерьера" id="interior" checked>
-              <label class="form__option-name" for="interior">Аксессуар для интерьера</label>
+        <div class="form__section-sorting">
+          <h3 class="form__section-name">Тип</h3>
+          <div class="form__section-kind">
+            <input class="form__option form__option--radio visually-hidden" type="radio" name="type-product" value="Аксессуар для интерьера" id="interior" checked>
+            <label class="form__option-name" for="interior">Аксессуар для интерьера</label>
 
-              <input class="form__option form__option--radio visually-hidden" type="radio" name="type-product" value="Детская игрушка" id="toy">
-              <label class="form__option-name" for="toy">Детская игрушка</label>
-            </div>
+            <input class="form__option form__option--radio visually-hidden" type="radio" name="type-product" value="Детская игрушка" id="toy">
+            <label class="form__option-name" for="toy">Детская игрушка</label>
           </div>
+        </div>
 
+        <div class="form__section-container">
           <div class="form__section-sorting form__section-sorting--color">
             <h3 class="form__section-name">Цвет</h3>
             <div class="form__section-color">
@@ -176,29 +177,33 @@
               <label class="form__option-name" for="orange">Оранжевый</label>
             </div>
           </div>
+        </div>
 
-          <div class="form__section-sorting">
-            <h3 class="form__section-name">ФИО</h3>
-            <div class="form__section-customer">
-              <ul class="form__list-customer">
-                <li class="form__item-customer">
-                  <label class="form__field-header" for="name-customer">Имя:</label>
-                  <input class="form__field" type="text" name="name-customer" placeholder="Введите ваше имя*" id="name-customer" required>
-                </li>
 
-                <li class="form__item-customer">
-                  <label class="form__field-header" for="second-name-customer">Фамилия:</label>
-                  <input class="form__field" type="text" name="second-name-customer" placeholder="Укажите фамилию*" id="second-name-customer" required>
-                </li>
+        <div class="form__section-sorting">
+          <h3 class="form__section-name">ФИО</h3>
+          <div class="form__section-customer">
+            <ul class="form__list-customer">
+              <li class="form__item-customer">
+                <label class="form__field-header" for="name-customer">Имя:</label>
+                <input class="form__field" type="text" name="name-customer" placeholder="Введите ваше имя*" id="name-customer" required>
+              </li>
 
-                <li class="form__item-customer">
-                  <label class="form__field-header" for="patronymic-customer">Отчество:</label>
-                  <input class="form__field" type="text" name="patronymic" placeholder="Отчество, если желаете" id="patronymic-customer">
-                </li>
-              </ul>
-            </div>
+              <li class="form__item-customer">
+                <label class="form__field-header" for="second-name-customer">Фамилия:</label>
+                <input class="form__field" type="text" name="second-name-customer" placeholder="Укажите фамилию*" id="second-name-customer" required>
+              </li>
+
+              <li class="form__item-customer">
+                <label class="form__field-header" for="patronymic-customer">Отчество:</label>
+                <input class="form__field" type="text" name="patronymic" placeholder="Отчество, если желаете" id="patronymic-customer">
+              </li>
+            </ul>
           </div>
+        </div>
 
+
+        <div class="form__section-container">
           <div class="form__section-sorting form__section-sorting--contacts">
             <h3 class="form__section-name">Тел</h3>
             <div class="form__section-contacts">
@@ -226,20 +231,19 @@
               </svg>
             </div>
           </div>
+        </div>
 
-          <div class="form__section-sorting form__section-sorting--wishes">
-            <h3 class="form__section-name">Доп</h3>
-            <textarea class="form__field form__field--wishes" type="text" name="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </div>
+        <div class="form__section-sorting form__section-sorting--wishes">
+          <h3 class="form__section-name">Доп</h3>
+          <textarea class="form__field form__field--wishes" type="text" name="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </div>
 
-          <div class="form__add-container">
-            <span class="form__text-required">*Поля обязательны для заполнения</span>
+        <div class="form__add-container">
+          <span class="form__text-required">*Поля обязательны для заполнения</span>
 
-            <input class="button form__button" type="submit" name="send-order" value="Отправить заказ">
-          </div>
-        </form>
-
-      </div>
+          <input class="button form__button" type="submit" name="send-order" value="Отправить заказ">
+        </div>
+      </form>
     </section>
 
   </main>

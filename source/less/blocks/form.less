@@ -1,11 +1,9 @@
-.form__wrapper {
-  .size-mobile();
-  display: flex;
-  flex-direction: column;
+.form__header-container {
+  background-color: #f1f1f1;
 }
 
 .form__header {
-  margin: 0;
+  .size-mobile();
   padding-top: 73px;
   padding-bottom: 73px;
   padding-left: 30px;
@@ -13,8 +11,6 @@
 
   .font(27px; 30px; bold);
   text-align: center;
-
-  background-color: #f1f1f1;
 }
 
 .form__knitting {
@@ -25,7 +21,7 @@
 }
 
 .form__description {
-  margin: 0;
+  .size-mobile();
   margin-top: 22px;
   margin-bottom: 22px;
   padding: 0;
@@ -34,11 +30,10 @@
 }
 
 .form__section-sorting {
+  .size-mobile();
   position: relative;
   display: flex;
   flex-direction: column;
-
-  margin: 0;
 }
 
 .form__section-kind,
@@ -233,6 +228,7 @@
 }
 
 .form__add-container {
+  .size-mobile();
   margin-bottom: 55px;
 }
 
@@ -241,14 +237,9 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__wrapper {
-    .size-tablet();
-  }
-
   .form__header {
+    .size-tablet();
     position: relative;
-    width: @tablet-width;
-    margin: 0;
     padding-top: 100px;
     padding-bottom: 85px;
     padding-left: 50px;
@@ -277,6 +268,7 @@
   }
 
   .form__description {
+    .size-tablet();
     padding-top: 70px;
     padding-bottom: 55px;
     padding-left: 50px;
@@ -284,20 +276,20 @@
     .font(17px; 30px; normal);
   }
 
+  .form__section-container {
+    background-color: #f1f1f1;
+  }
+
   .form__section-sorting {
+    .size-tablet();
     position: relative;
     display: flex;
     flex-direction: row;
 
-    margin: 0;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
-
-    &--color {
-      background-color: #f1f1f1;
-    }
 
     &--contacts {
       flex-wrap: wrap;
@@ -360,6 +352,7 @@
   }
 
   .form__add-container {
+    .size-tablet();
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -369,13 +362,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__wrapper {
-    .size-desktop();
-  }
-
   .form__header {
+    .size-desktop();
     position: relative;
-    width: @desktop-width;
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -395,7 +384,12 @@
   }
 
   .form__description {
+    .size-desktop();
     padding-top: 110px;
+  }
+
+  .form__section-sorting {
+    .size-desktop();
   }
 
   .form__section-name {
@@ -438,6 +432,7 @@
   }
 
   .form__add-container {
+    .size-desktop();
     width: 700px;
     align-self: center;
     padding: 0;
