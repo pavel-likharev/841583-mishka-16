@@ -5,12 +5,13 @@
   flex-direction: column;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 30px;
 }
 
 .reviews__header {
   padding: 0;
   margin: 0;
-  margin-top: 30px;
+
   margin-bottom: 10px;
 
   .font(25px; 30px; bold);
@@ -80,6 +81,8 @@
   height: 8px;
   margin-left: -30px;
   transform: rotate(180deg);
+
+  fill: #f1f1f1;
 }
 
 @media (min-width: @tablet-width) {
@@ -91,16 +94,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-top: 80px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 79px;
 
     .icon-element(url("../../img/review@1x.jpg"); no-repeat; 350px 457px; 0 0);
   }
 
   .reviews__header {
     .font(43px; 50px; bold);
-    margin-top: 80px;
+    margin-left: -5px;
   }
 
   .reviews__item {
@@ -109,11 +112,12 @@
     justify-content: space-between;
     order: 3;
 
+    margin: 0;
     margin-bottom: 75px;
   }
 
   .reviews__text {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     .font(17px; 30px; regular);
   }
 
@@ -125,6 +129,7 @@
 
   .reviews__name {
     .font(18px; 24px; bold);
+    margin-bottom: 3px;
   }
 
   .reviews__link-instagram {
@@ -132,13 +137,22 @@
     .font(17px; 30px; regular);
   }
 
+  .reviews__nav {
+    margin-bottom: 45px;
+  }
+
   .reviews__button-send {
-    margin-top: 80px;
     width: 175px;
+    margin: 0;
+    margin-bottom: 28px;
+
+    .font(17px; 20px; bold);
   }
 
   .reviews__button {
     width: 87px;
+    border: none;
+    padding-top: 10px;
   }
 
   .reviews__line {
@@ -153,10 +167,38 @@
 @media (min-width: @desktop-width) {
   .reviews__wrapper {
     .size-desktop();
+
+    background-position-x: 50px;
+    padding-top: 70px;
+    padding-left: 225px;
+  }
+
+  .reviews__header {
+    .font(53px; 57px; bold);
+  }
+
+  .reviews__text {
+    width: 875px;
+    padding-right: 100px;
+    margin-bottom: 40px;
+    white-space: pre-line;
+  }
+
+  .reviews__name {
+    .font(17px; 24px; bold);
+  }
+
+  .reviews__button-send {
+    margin-top: 10px;
+  }
+
+  .reviews__nav {
+    margin-bottom: 90px;
   }
 
   .reviews__line {
-    width: @desktop-width;
+    width: 1050px;
     height: 23px;
+    margin-left: -175px;
   }
 }
