@@ -4,8 +4,8 @@
 
 .form__header {
   .size-mobile();
-  padding-top: 73px;
-  padding-bottom: 73px;
+  padding-top: 70px;
+  padding-bottom: 74px;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -16,15 +16,15 @@
 .form__knitting {
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .form__description {
   .size-mobile();
   margin-top: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 
   .font(13px; 24px; regular);
 }
@@ -34,33 +34,46 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &--wishes {
+    margin-bottom: 0;
+  }
 }
 
 .form__section-kind,
 .form__section-color,
 .form__section-customer,
 .form__section-contacts {
+  .size-mobile();
   position: relative;
   display: flex;
   flex-direction: column;
 
   margin: 0;
-  margin-bottom: 32px;
+  margin-top: 25px;
+  margin-bottom: 34px;
+}
+
+.form__section-contacts {
+  margin-top: 9px;
+}
+
+.form__section-color {
+  margin-bottom: 10px;
 }
 
 .form__list-customer {
   .list-reset();
-}
 
-
-.form__section-sorting--wishes {
-  margin-bottom: 0;
+  padding-top: 5px;
 }
 
 .form__section-name {
   margin: 0;
-  margin-bottom: 26px;
   padding: 0;
+  text-transform: uppercase;
 
   .font(17px; 16px; bold);
   color: @green-lighter;
@@ -83,15 +96,19 @@
 
   width: 240px;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   padding-left: 62px;
-  padding-right: 40px;
+  padding-right: 20px;
   padding-top: 11px;
   padding-bottom: 11px;
 
   .font(17px; 18px; bold);
 
   cursor: pointer;
+}
+
+.form__section-kind .form__option-name {
+  margin: 0;
 }
 
 .form__option--checkbox + .form__option-name {
@@ -164,6 +181,10 @@
   }
 }
 
+.form__item-customer:not(:nth-child(3)) {
+  margin-bottom: 24px;
+}
+
 .form__field-header {
   margin: 0;
   padding: 0;
@@ -176,8 +197,7 @@
 .form__field {
   display: block;
   width: 260px;
-  height: 50px;
-  margin-bottom: 24px;
+  height: 48px;
   padding-top: 16px;
   padding-bottom: 16px;
 
@@ -204,14 +224,15 @@
 
 .form__icon {
   position: absolute;
-  top: 15px;
-  right: 4px;
+  top: 8px;
+  right: 68px;
 }
 
 .form__field--wishes {
   height: 140px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: 24px;
   margin-bottom: 0;
 
   border: 2px solid @black;
@@ -222,7 +243,7 @@
   display: inline-block;
   margin: 0;
   margin-top: 17px;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
   padding: 0;
   .font(14px; 16px; regular);
 }
@@ -230,6 +251,8 @@
 .form__add-container {
   .size-mobile();
   margin-bottom: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .form__button {
@@ -240,8 +263,8 @@
   .form__header {
     .size-tablet();
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 85px;
+    padding-top: 92px;
+    padding-bottom: 95px;
     padding-left: 50px;
     padding-right: 50px;
 
@@ -269,8 +292,8 @@
 
   .form__description {
     .size-tablet();
-    padding-top: 70px;
-    padding-bottom: 55px;
+    padding-top: 60px;
+    padding-bottom: 8px;
     padding-left: 50px;
     padding-right: 50px;
     .font(17px; 30px; normal);
@@ -287,13 +310,18 @@
     flex-direction: row;
 
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 28px;
     padding-left: 50px;
     padding-right: 50px;
 
     &--contacts {
       flex-wrap: wrap;
       background-color: #f1f1f1;
+      padding-bottom: 26px;
+    }
+
+    &--customer {
+      padding-bottom: 50px;
     }
   }
 
@@ -304,10 +332,16 @@
     width: 501px;
   }
 
+  .form__section-kind {
+    margin: 0;
+    padding-top: 0;
+  }
+
   .form__section-color {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
   }
 
   .form__option-name,
@@ -315,11 +349,12 @@
     width: 501px;
   }
 
-  .form__field {
-    &--phone,
-    &--email {
-      background-color: #f1f1f1;
-    }
+  .form__option-name {
+    .font(19px; 18px; bold);
+    padding-top: 15px;
+    padding-bottom: 42px;
+    padding-left: 80px;
+    margin-bottom: 0;
   }
 
   .form__section-color .form__option-name {
@@ -329,9 +364,8 @@
   .form__section-name {
     width: 167px;
     margin: 0;
-    margin-bottom: 26px;
     padding: 0;
-    padding-top: 15px;
+    padding-top: 16px;
 
     .font(17px; 16px; bold);
     color: @green-lighter;
@@ -341,14 +375,106 @@
     }
   }
 
+  .form__option--checkbox + .form__option-name {
+    &::before {
+      content: "";
+
+      width: 54px;
+      height: 52px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      border: 2px solid @black;
+    }
+  }
+
+  .form__option--checkbox:checked + .form__option-name {
+    &::before {
+      .icon-element(url("../../img/icon-tick.svg"); no-repeat; 33px 22px; center);
+    }
+  }
+
+  .form__option--radio + .form__option-name {
+    &::before {
+      content: "";
+
+      width: 52px;
+      height: 52px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      border: 2px solid @black;
+      border-radius: 50%;
+    }
+  }
+
+  .form__option--radio:checked + .form__option-name {
+    &::after {
+      content: "";
+
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      top: 16px;
+      left: 16px;
+
+      background-color: @green-lighter;
+      border-radius: 50%;
+    }
+  }
+
+  .form__section-customer {
+    margin: 0;
+  }
+
+  .form__list-customer {
+    padding: 0;
+  }
+
   .form__item-customer {
     display: flex;
     width: 501px;
     align-items: baseline;
+    margin-top: 0;
   }
 
   .form__field-header {
-    margin-right: 25px;
+    margin-right: 26px;
+
+    .font(19px; 18px; bold);
+  }
+
+  .form__field {
+    height: 52px;
+    padding-left: 15px;
+    .font(19px; 18px; regular);
+
+    &--phone,
+    &--email {
+      background-color: #f1f1f1;
+    }
+
+    &--wishes {
+      height: 142px;
+      margin: 0;
+      padding-top: 13px;
+      resize: none;
+    }
+  }
+
+  .form__section-contacts {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .form__icon {
+    top: 10px;
+    right: 23px;
   }
 
   .form__add-container {
@@ -359,14 +485,26 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .form__text-required {
+    .font(17px; 30px; normal);
+    margin: 0;
+    margin-top: 33px;
+  }
+
+  .form__button {
+    width: 230px;
+    margin-top: 26px;
+    margin-bottom: 50px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form__header {
     .size-desktop();
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 92px;
+    padding-bottom: 120px;
 
     .font(53px; 57px; bold);
 
@@ -385,16 +523,20 @@
 
   .form__description {
     .size-desktop();
-    padding-top: 110px;
+    width: 1050px;
+    padding-top: 105px;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 
   .form__section-sorting {
     .size-desktop();
+    padding-bottom: 27px;
   }
 
   .form__section-name {
     width: 175px;
-    text-align: center;
+    padding-left: 62px;
   }
 
   .form__section-kind,
@@ -404,10 +546,25 @@
     width: 875px;
   }
 
+  .form__section-color {
+    justify-content: flex-start;
+  }
+
+  .form__option-name {
+    margin-right: 22px;
+  }
+
+
   .form__section-customer {
     width: 700px;
+    margin-left: 2px;
+    margin-bottom: 25px;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .form__section-contacts {
+    margin-bottom: 22px;
   }
 
   .form__item-customer {
@@ -436,5 +593,10 @@
     width: 700px;
     align-self: center;
     padding: 0;
+  }
+
+  .form__button {
+    margin-top: 22px;
+    margin-bottom: 51px;
   }
 }

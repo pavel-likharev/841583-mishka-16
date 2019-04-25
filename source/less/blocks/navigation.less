@@ -3,6 +3,14 @@
   z-index: 5;
 }
 
+.navigation--close {
+  display: none;
+}
+
+.navigation--open {
+  display: block;
+}
+
 .navigation__list {
   .list-reset();
 
@@ -30,11 +38,6 @@
     display: none;
   }
 }
-
-.navigation__logo-desktop {
-  display: none;
-}
-
 
 .navigation__link {
   .link-reset();
@@ -77,12 +80,13 @@ a[href].navigation__link {
     flex-direction: row;
 
     flex-wrap: wrap;
-    margin-bottom: -80px;
+    margin-bottom: -69px;
   }
 
   .navigation__item {
     width: 167px;
     .font(15px; 24px; bold);
+    border: none;
 
     &--catalog {
       order: 4;
@@ -101,14 +105,14 @@ a[href].navigation__link {
     &--search {
       order: 2;
       width: 84px;
-      margin-left: 150px;
-      border-right: 2px solid @grey;
-      border-left: 2px solid @grey;
+      margin-left: 153px;
+      border-right: 1px solid @grey;
+      border-left: 1px solid @grey;
     }
 
     &--cart {
       order: 3;
-      width: 266px;
+      width: 264px;
 
       font-size: 17px;
     }
@@ -125,19 +129,36 @@ a[href].navigation__link {
   }
 
   .navigation__link {
+    margin: 0;
+    padding-top: 16px;
     padding-left: 0;
 
     .font(inherit; inherit; inherit);
 
+    &--logo {
+      width: 167px;
+      padding: 0;
+      padding-top: 22px;
+      padding-bottom: 16px;
+      margin: 0;
+    }
+
     &--cart {
       text-align: right;
+      padding-top: 32px;
+      padding-bottom: 30px;
     }
 
     &--search {
       padding-left: 32px;
       padding-right: 32px;
-      padding-bottom: 49px;
+      padding-top: 35px;
+      padding-bottom: 52px;
     }
+  }
+
+  .navigation__logo-desktop {
+    display: none;
   }
 
   .navigation__link-text {
@@ -152,6 +173,10 @@ a[href].navigation__link {
 
   .navigation__logo-desktop {
     display: block;
+  }
+
+  .navigation__list {
+    margin-bottom: -75px;
   }
 
   .navigation__item {
@@ -170,8 +195,9 @@ a[href].navigation__link {
 
     &--logo {
       order: 3;
-      margin-left: 40px;
-      margin-right: 104px;
+      margin-left: 42px;
+      margin-right: 82px;
+      padding: 0;
     }
 
     &--search {
@@ -216,5 +242,30 @@ a[href].navigation__link {
     .font(inherit; inherit; inherit);
     padding-left: 35px;
     padding-right: 35px;
+    padding-top: 30px;
+    padding-bottom: 32px;
+
+    &--logo {
+      padding: 0;
+    }
+
+    &--search {
+      padding-top: 38px;
+      padding-bottom: 50px;
+    }
+
+    &--new {
+      padding-top: 20px;
+    }
+
+    &--sale {
+      padding-top: 20px;
+      padding-left: 27px;
+    }
+
+    &--delivery {
+      padding-top: 20px;
+      padding-left: 43px;
+    }
   }
 }

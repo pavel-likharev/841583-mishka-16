@@ -34,6 +34,7 @@ a[href].header__logo {
 }
 
 .header__button-main-nav {
+  display: none;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -43,13 +44,17 @@ a[href].header__logo {
 
   background-color: @white;
   border: none;
+
+  cursor: pointer;
 }
 
 .header__button-main-nav--close {
+  display: block;
   .icon-element(url("../../img/icon-menu-close.svg"); no-repeat; 21px 20px; center;);
 }
 
 .header__button-main-nav--open {
+  display: block;
   .icon-element(url("../../img/icon-menu-open.svg"); no-repeat; 21px 20px; center;);
 }
 
