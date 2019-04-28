@@ -79,10 +79,15 @@
 
 .sorting-nav__icon {
   fill: #3bb09d;
+  margin-top: 5px;
 }
 
 .sorting-nav__icon--interior {
   margin-right: 10px;
+}
+
+.sorting-nav__icon--toys {
+  fill: #35a999;
 }
 
 @media (min-width: @tablet-width) {
@@ -96,8 +101,8 @@
   }
 
   .sorting-nav__header {
-    padding-top: 152px;
-    padding-bottom: 375px;
+    padding-top: 155px;
+    padding-bottom: 372px;
     padding-left: 80px;
     padding-right: 80px;
     margin-left: 50px;
@@ -165,7 +170,7 @@
   .sorting-nav__header {
     padding-left: 200px;
     padding-right: 200px;
-    padding-bottom: 360px;
+    padding-bottom: 358px;
 
     .font(53px; 57px; bold);
     white-space: normal;
@@ -175,9 +180,10 @@
     width: @desktop-width;
 
     &::after {
+      top: 100px;
       width: 1150px;
-      height: 34px;
-      .icon-element(url("../../img/bg-zigzag-fill.svg"); no-repeat; 1150px 34px; center);
+      height: 38px;
+      .icon-element(url("../../img/bg-zigzag-fill.svg"); no-repeat; 1250px 42px; center);
     }
   }
 
