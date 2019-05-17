@@ -9,10 +9,10 @@
 }
 
 .reviews__header {
-  padding: 0;
   margin: 0;
-
+  margin-left: -2px;
   margin-bottom: 10px;
+  padding: 0;
 
   .font(25px; 30px; bold);
 }
@@ -31,8 +31,9 @@
 }
 
 .reviews__author {
-  font-style: normal;
   margin-bottom: 30px;
+
+  font-style: normal;
 }
 
 .reviews__name {
@@ -41,17 +42,24 @@
 
 .reviews__link-instagram {
   .link-reset();
+
   .font(17px; 24px; regular);
+  font-weight: 400;
 }
 
 .reviews__nav {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .reviews__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 130px;
-  height: 50px;
+  height: 52px;
+  padding-left: 2px;
+
   border: 1px solid @grey;
   background-color: @white;
 
@@ -73,6 +81,7 @@
 
 .reviews__button-send {
   margin-bottom: 45px;
+
   .font(18px; 20px; bold);
 }
 
@@ -80,23 +89,23 @@
   width: 320px;
   height: 8px;
   margin-left: -30px;
-  transform: rotate(180deg);
 
   fill: #f1f1f1;
+  transform: rotate(180deg);
 }
 
 @media (min-width: @tablet-width) {
   .reviews__wrapper {
+    .size-tablet();
+
     position: relative;
 
-    .size-tablet();
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    padding-left: 50px;
+    padding-left: 49px;
     padding-right: 50px;
-    padding-top: 79px;
+    padding-top: 77px;
 
     .icon-element(url("../img/review@1x.jpg"); no-repeat; 350px 457px; 0 0);
 
@@ -106,8 +115,9 @@
   }
 
   .reviews__header {
+    margin-left: -4px;
+
     .font(43px; 50px; bold);
-    margin-left: -5px;
   }
 
   .reviews__item {
@@ -122,6 +132,7 @@
 
   .reviews__text {
     margin-bottom: 58px;
+
     .font(17px; 30px; regular);
   }
 
@@ -132,12 +143,14 @@
   }
 
   .reviews__name {
-    .font(18px; 24px; bold);
     margin-bottom: 3px;
+
+    .font(18px; 24px; bold);
   }
 
   .reviews__link-instagram {
     .link-reset();
+
     .font(17px; 30px; regular);
   }
 
@@ -155,8 +168,9 @@
 
   .reviews__button {
     width: 87px;
+    padding-top: 7px;
+
     border: none;
-    padding-top: 10px;
   }
 
   .reviews__line {
@@ -171,10 +185,10 @@
 @media (min-width: @desktop-width) {
   .reviews__wrapper {
     .size-desktop();
-
-    background-position-x: 50px;
     padding-top: 70px;
     padding-left: 225px;
+
+    background-position-x: 50px;
   }
 
   .reviews__header {
@@ -185,6 +199,7 @@
     width: 875px;
     padding-right: 100px;
     margin-bottom: 40px;
+
     white-space: pre-line;
   }
 
@@ -194,6 +209,10 @@
 
   .reviews__button-send {
     margin-top: 10px;
+  }
+
+  .reviews__button {
+    padding-top: 0;
   }
 
   .reviews__nav {

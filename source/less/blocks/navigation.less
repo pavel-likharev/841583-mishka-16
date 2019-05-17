@@ -1,6 +1,7 @@
 .navigation {
-  padding: 0;
   z-index: 5;
+
+  padding: 0;
 }
 
 .navigation__list {
@@ -12,6 +13,7 @@
 
 .navigation__item {
   position: relative;
+
   border-bottom: 1px solid @grey;
 
   &--logo {
@@ -33,13 +35,14 @@
 
 .navigation__link {
   .link-reset();
-  .font(17px; 24px; bold);
 
   display: block;
 
   padding-top: 27px;
   padding-bottom: 27px;
   padding-left: 76px;
+
+  .font(17px; 24px; bold);
 }
 
 a[href].navigation__link {
@@ -47,7 +50,7 @@ a[href].navigation__link {
   &:focus {
     color: rgba(0, 0, 0, 0.6);
 
-    .navigation__link-icon-color {
+    .navigation__link-icon {
       fill: @emerald;
     }
   }
@@ -55,8 +58,19 @@ a[href].navigation__link {
   &:active {
     color: rgba(0, 0, 0, 0.3);
 
-    .navigation__link-icon-color {
+    .navigation__link-icon {
       fill: @emerald;
+      opacity: 0.3;
+    }
+  }
+
+  &--logo {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
       opacity: 0.3;
     }
   }
@@ -105,11 +119,13 @@ a[href].navigation__link {
       flex-grow: 1;
       order: 1;
       width: 320px;
+
       border-bottom: 1px solid #e7e7e7;
     }
 
     &--search {
       order: 2;
+
       border-right: 1px solid @grey;
       border-left: 1px solid @grey;
       border-bottom: 1px solid #e7e7e7;
@@ -117,6 +133,7 @@ a[href].navigation__link {
 
     &--cart {
       order: 3;
+
       border-bottom: 1px solid #e7e7e7;
     }
 
@@ -124,6 +141,7 @@ a[href].navigation__link {
       display: block;
       order: 6;
       flex-grow: 1;
+
       text-align: right;
     }
 
@@ -142,6 +160,7 @@ a[href].navigation__link {
     padding-bottom: 14px;
     padding-left: 18px;
     padding-right: 18px;
+
     .font(15px; 24px; bold);
 
     &--logo {
@@ -153,6 +172,7 @@ a[href].navigation__link {
       padding-top: 31px;
       padding-bottom: 31px;
       padding-left: 83px;
+
       font-size: 17px;
       text-align: right;
     }
@@ -196,12 +216,14 @@ a[href].navigation__link {
 
     &--catalog {
       order: 1;
+
       border-bottom: 1px solid #e7e7e7;
       border-right: 1px solid @grey;
     }
 
     &--form {
       order: 2;
+
       border-bottom: 1px solid #e7e7e7;
     }
 

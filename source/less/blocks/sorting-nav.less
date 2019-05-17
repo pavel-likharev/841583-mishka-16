@@ -20,11 +20,13 @@
 }
 
 .sorting-nav__header {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
   padding-top: 40px;
   padding-bottom: 120px;
   padding-left: 38px;
   padding-right: 38px;
-  margin: 0;
 
   font-size: 27px;
   line-height: 30px;
@@ -35,38 +37,48 @@
 
 .sorting-nav__list {
   .list-reset();
+  .size-mobile();
 
   display: flex;
   flex-direction: column;
-  .size-mobile();
 }
 
 .sorting-nav__link {
-  .font(19px; 24px; bold);
   .link-reset();
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding-top: 8px;
   padding-bottom: 10px;
   padding-left: 27px;
   padding-right: 27px;
 
+  .font(19px; 24px; bold);
   color: @white;
 
   &:hover,
   &:focus {
+    background-color: #59d5bc;
+
     transform: scaleY(1.05);
-    padding-bottom: 15px;
   }
 
   &:hover .sorting-nav__text,
   &:hover .sorting-nav__icon,
   &:focus .sorting-nav__text,
   &:focus .sorting-nav__icon {
+    fill: #29a592;
+
     transform: translateY(-5px);
+  }
+
+  &:active .sorting-nav__text {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active .sorting-nav__icon {
+    fill: #44c0aa;
   }
 }
 
@@ -83,7 +95,6 @@
 }
 
 .sorting-nav__icon {
-  fill: #3bb09d;
   margin-top: 5px;
 }
 
@@ -102,46 +113,49 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: @white;
+    background-color: #f9f9f9;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
       background-size: 1150px auto;
     }
+
+    &::after {
+      content: "";
+
+      z-index: 5;
+
+      width: @tablet-width;
+      height: 24px;
+      margin-top: -10px;
+      margin-bottom: -14px;
+
+      .icon-element(url("../img/bg-zigzag-fill.svg"); no-repeat; 768px 24px; center);
+    }
   }
 
   .sorting-nav__header {
+    margin-left: 50px;
+    margin-right: 50px;
+
     padding-top: 155px;
     padding-bottom: 372px;
     padding-left: 80px;
     padding-right: 80px;
-    margin-left: 50px;
-    margin-right: 50px;
-
 
     .font(43px; 50px; bold);
     white-space: normal;
   }
 
   .sorting-nav__list {
-    width: @tablet-width;
     position: relative;
+
     flex-direction: row;
+    width: @tablet-width;
+
+    margin: 0;
     padding-left: 50px;
     padding-right: 50px;
-    margin: 0;
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-
-      width: @tablet-width;
-      height: 24px;
-      .icon-element(url("../img/bg-zigzag-fill.svg"); no-repeat; 768px 24px; center);
-    }
   }
 
   .sorting-nav__item {
@@ -149,12 +163,12 @@
   }
 
   .sorting-nav__link {
-    .font(20px; 30px; bold);
-
     padding-top: 8px;
-    padding-bottom: 22px;
+    padding-bottom: 10px;
     padding-left: 35px;
     padding-right: 25px;
+
+    .font(20px; 30px; bold);
 
     &--toys {
       padding-right: 35px;
@@ -180,6 +194,15 @@
       background-image: url("../img/hero-desktop@2x.jpg");
       background-size: 1150px auto;
     }
+
+    &::after {
+      width: 1150px;
+      height: 38px;
+      margin-top: -18px;
+      margin-bottom: -26px;
+
+      .icon-element(url("../img/bg-zigzag-fill.svg"); no-repeat; 1250px 42px; center);
+    }
   }
 
   .sorting-nav__header {
@@ -193,13 +216,6 @@
 
   .sorting-nav__list {
     width: @desktop-width;
-
-    &::after {
-      top: 100px;
-      width: 1150px;
-      height: 38px;
-      .icon-element(url("../img/bg-zigzag-fill.svg"); no-repeat; 1250px 42px; center);
-    }
   }
 
   .sorting-nav__item {
