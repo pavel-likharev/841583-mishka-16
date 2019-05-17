@@ -1,11 +1,8 @@
-// * {
-//   outline: 1px dashed lightgrey;
-// }
-
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
 }
 
@@ -13,6 +10,7 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
   src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
 }
 
@@ -55,4 +53,8 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.sprite {
+  display: none;
 }

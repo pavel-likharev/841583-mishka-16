@@ -1,15 +1,26 @@
 .product {
   display: flex;
   flex-direction: column;
-
   width: 260px;
+
+  transition: 0.4s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 23px 25px -12px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .product__description {
   display: flex;
   flex-direction: column;
-  padding-left: 28px;
-  padding-right: 28px;
+  margin-top: -4px;
+  padding-left: 27px;
+  padding-right: 27px;
 
   border: 1px solid @grey;
 }
@@ -31,10 +42,11 @@
 }
 
 .product__text {
-  padding: 0;
-  padding-top: 5px;
+  display: inline-block;
   margin: 0;
   margin-bottom: 18px;
+  padding: 0;
+  padding-top: 5px;
 
   .font(13px; 30px; normal);
 }
@@ -42,12 +54,13 @@
 .product__purchase {
   display: flex;
   justify-content: space-between;
-
-  padding-top: 20px;
-  padding-bottom: 28px;
+  padding-top: 22px;
+  padding-bottom: 26px;
 
   border-top: 1px solid @grey;
+}
 
+.product__purchase-link {
   .link-reset();
   cursor: pointer;
 
@@ -76,59 +89,81 @@
 @media (min-width: @tablet-width) {
   .product {
     flex-direction: row;
-
     width: 668px;
   }
 
   .product__name {
     margin-top: 25px;
+    padding-right: 40px;
+
     .font(20px; 24px; bold);
   }
 
   .product__text {
+    margin: 0;
+
     .font(15px; 30px; normal);
+
+    &--correction {
+      padding-top: 8px;
+    }
   }
 
   .product__image {
     width: 334px;
     height: 334px;
+    margin-bottom: -4px;
   }
 
   .product__description {
     width: 334px;
     justify-content: space-between;
+    margin: 0;
+  }
+
+  .product__purchase {
+    width: 270px;
+    margin-left: 5px;
   }
 
   .product__price {
     .font(17px; 24px; bold);
-    padding-left: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product {
     flex-direction: column;
-
     width: 316px;
   }
 
   .product__image {
     width: 316px;
-    height: 462px;
+    height: 464px;
   }
 
   .product__description {
-    width: 316px;
-
     justify-content: space-between;
+    width: 316px;
+    padding-right: 30px;
   }
 
   .product__name {
-    height: 98px;
+    height: 96px;
+    padding-right: 20px;
   }
 
   .product__text {
     margin: 0;
+
+    &--correction {
+      padding-top: 6px;
+    }
+  }
+
+  .product__purchase {
+    width: 255px;
+    margin-left: 0;
   }
 
   .product__price {

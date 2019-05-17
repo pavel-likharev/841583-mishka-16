@@ -1,19 +1,21 @@
 .social {
-  border-bottom: 2px solid #ececec;
   padding-top: 25px;
   padding-bottom: 24px;
+
+  border-bottom: 2px solid #ececec;
 }
 
 .social__list {
+  .list-reset();
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  .list-reset();
+  align-items: baseline;
 }
 
 .social__item {
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 21px;
   padding: 0;
 }
 
@@ -38,13 +40,21 @@
 
 @media (min-width: @tablet-width) {
   .social {
-    width: 222px;
     flex-grow: 1;
+    width: 222px;
     padding: 0;
     padding-right: 5px;
+
+    border: none;
   }
 
   .social__item {
-    margin-top: 15px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__item {
+    margin-top: 12px;
   }
 }
