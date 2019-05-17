@@ -79,6 +79,7 @@
 
 .contacts__map-container {
   position: relative;
+  z-index: 10;
 
   width: 322px;
   height: 457px;
@@ -86,6 +87,29 @@
 
 .contacts__map {
   border: 0;
+  background-color: @white;
+  background-image:
+    url("../img/icon-map-pin.svg"),
+    url("../img/map-mobile@1x.jpg");
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    140px 140px,
+    top center;
+  background-size:
+    67px 100px,
+    100% 100%;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/icon-map-pin.svg"),
+      url("../img/map-mobile@2x.jpg");
+    background-size:
+      67px 100px,
+      322px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -163,6 +187,29 @@
   .contacts__map {
     width: 768px;
     height: 457px;
+
+    background-color: @white;
+    background-image:
+      url("../img/icon-map-pin.svg"),
+      url("../img/map-tablet@1x.jpg");
+    background-repeat:
+      no-repeat,
+      no-repeat;
+    background-position:
+      362px 138px,
+      top center;
+    background-size:
+      67px 100px,
+      768px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/icon-map-pin.svg"),
+        url("../img/map-tablet@2x.jpg");
+      background-size:
+        67px 100px,
+        768px auto;
+    }
   }
 
   .contacts__button {
@@ -231,6 +278,29 @@
   .contacts__map {
     width: 525px;
     height: 455px;
+
+    background-color: @white;
+    background-image:
+      url("../img/icon-map-pin.svg"),
+      url("../img/map-desktop@1x.jpg");
+    background-repeat:
+      no-repeat,
+      no-repeat;
+    background-position:
+      238px 150px,
+      top center;
+    background-size:
+      67px 100px,
+      525px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/icon-map-pin.svg"),
+        url("../img/map-desktop@2x.jpg");
+      background-size:
+        67px 100px,
+        525px auto;
+    }
   }
 
   .contacts__button {
